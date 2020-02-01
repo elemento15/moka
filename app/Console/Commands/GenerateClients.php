@@ -53,6 +53,11 @@ class GenerateClients extends Command
         $this->setCollections();
 
         $bar = $this->output->createProgressBar($num);
+
+        $bar->setBarCharacter('#');
+        $bar->setEmptyBarCharacter('-');
+        $bar->setProgressCharacter('|');
+
         $bar->start();
 
         while ($i <= $num) {
